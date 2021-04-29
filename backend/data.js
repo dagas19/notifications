@@ -1,28 +1,52 @@
+import bcrypt from "bcryptjs";
+
 const data = {
+  users: [
+    {
+      name: "Basir",
+      email: "admin@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: true,
+    },
+    {
+      name: "John",
+      email: "user@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
   notifications: [
     {
-      title: "New message",
+      subject: "New message",
+      read: true ? "yes" : "no",
     },
     {
-      title: "Your details have been updated",
+      subject: "Your details have been updated",
+      read: true ? "yes" : "no",
     },
     {
-      title: "You got rated",
+      subject: "You got rated",
+      read: true ? "yes" : "no",
     },
     {
-      title: "You've been reported",
+      subject: "You've been reported",
+      read: true ? "yes" : "no",
     },
     {
-      title: "You have a new message",
+      subject: "You have a new message",
+      read: false ? "yes" : "no",
     },
     {
-      title: "Your details have been updated",
+      subject: "Your details have been updated",
+      read: false ? "yes" : "no",
     },
     {
-      title: "You got rated",
+      subject: "You got rated",
+      read: false ? "yes" : "no",
     },
     {
-      title: "You've been reported",
+      subject: "You've been reported",
+      read: false ? "yes" : "no",
     },
   ],
 };
