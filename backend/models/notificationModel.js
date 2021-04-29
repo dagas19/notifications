@@ -4,7 +4,7 @@ const notificationSchema = new mongoose.Schema(
   {
     subject: { type: String, required: true },
     read: { type: Boolean, default: false, required: true },
-    receivedAt: { type: Date },
+    receivedAt: { type: String },
   },
   {
     timestamps: true,
